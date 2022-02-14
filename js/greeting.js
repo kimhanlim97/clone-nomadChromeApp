@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector('#greeting')
+const logoutForm = document.querySelector("#logout-form");
+const greeting = document.querySelector('#logout-form #greeting');
 
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
@@ -20,10 +21,27 @@ function onLoginSubmit(event) {
     paintGreetings(username)
 }
 
+function onLogoutSubmit(event) {
+    event.preventDefault();
+
+    logoutForm.classList.add(HIDDEN_CLASSNAME);
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginInput.value = '';
+
+    localStorage.clear();
+
+    // todo.js의 todos 변수를 초기화하고 toDoList 변수의 자식 엘리먼트들을 모두 삭제함
+    todos = [];
+    [...toDoList.childNodes].forEach(li => li.remove())
+}
+
 function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`
-    greeting.classList.remove(HIDDEN_CLASSNAME)
+    logoutForm.classList.remove(HIDDEN_CLASSNAME)
 }
+
+loginForm.addEventListener('submit', onLoginSubmit)
+logoutForm.addEventListener('submit', onLogoutSubmit);
 
 // Local Storage에 저장된 username을 변수에 할당(만약 존재하지 않을 경우 null값이 할당됨)
 const savedUsername = localStorage.getItem(USERNAME_KEY)
@@ -32,7 +50,6 @@ if (savedUsername === null) {
 
     // Local Storage에 저장된 username이 없을 경우 로그인 창을 활성화함
     loginForm.classList.remove(HIDDEN_CLASSNAME)
-    loginForm.addEventListener('submit', onLoginSubmit)
 
 } else {
 
