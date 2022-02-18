@@ -1,7 +1,7 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
-const logoutForm = document.querySelector("#logout-form");
-const greeting = document.querySelector('#logout-form #greeting');
+const loginForm = document.querySelector(".login-form");
+const loginInput = document.querySelector(".login-form__id-input");
+const logoutForm = document.querySelector(".logout-form");
+const greeting = document.querySelector('.logout-form__greeting');
 
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
@@ -9,6 +9,8 @@ const USERNAME_KEY = "username"
 function onLoginSubmit(event) {
     event.preventDefault()
     const username = loginInput.value
+
+    console.log('asdf')
 
     if (!/^[A-Za-z가-힣0-9]{1,16}$/.test(username)) {
         alert("아이디는 완전한 한글, 영문, 숫자만 쓸 수 있으며 1자 이상에서 16자 이하이어야 합니다")

@@ -8,23 +8,23 @@
     <title>clone-nomadChromeApp</title>
 </head>
 <body>
-    <h2 id="clock">00:00</h2>
-    <form id="login-form" class="hidden">
-        <input type="text" placeholder="What is your name?" maxlength="15" />
-        <button>Log In</button>
+    <h2 class="clock"></h2>
+    <form class="login-form hidden">
+        <input class="input-text login-form__id-input" type="text" placeholder="What is your name?" maxlength="15" />
+        <button class="btn login-form__login">Log In</button>
     </form>
-    <form id="logout-form" class="hidden">
-        <h1 id="greeting"></h1>
-        <button>Log Out</button>
+    <form class="logout-form hidden">
+        <h1 class="logout-form__greeting"></h1>
+        <button class="btn logout-form__logout">Log Out</button>
     </form>
-    <form id="todo-form" class="hidden">
-        <input type="text" placeholder="Write a To Do and Press Enter" required>
+    <form class="todo-form hidden">
+        <input class="input-text todo-form__todo-input" type="text" placeholder="Write a To Do and Press Enter" required>
     </form>
-    <ul id="todo-list"></ul>
-    <p id="quote"></p>
-    <div id="weather">
-        <span></span>
-        <span></span>
+    <ul class="todo-list"></ul>
+    <p class="quote"></p>
+    <div class="weather">
+        <span class="weather__city"></span>
+        <span class="weather__temp"></span>
     </div>
     <script src="js/background.js"></script>
     <script src="js/greeting.js"></script>
