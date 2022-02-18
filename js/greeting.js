@@ -16,6 +16,10 @@ function onLoginSubmit(event) {
     }
 
     loginForm.classList.add(HIDDEN_CLASSNAME)
+
+    // todo.js의 ToDoForm DOM 객체의 hidden 클래스를 제거함
+    toDoForm.classList.remove(HIDDEN_CLASSNAME)
+
     localStorage.setItem(USERNAME_KEY, username)
 
     paintGreetings(username)
@@ -27,6 +31,9 @@ function onLogoutSubmit(event) {
     logoutForm.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginInput.value = '';
+
+    // todo.js의 ToDoForm DOM 객체의 hidden 클래스를 추가함
+    toDoForm.classList.add(HIDDEN_CLASSNAME);
 
     localStorage.clear();
 
