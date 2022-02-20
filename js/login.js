@@ -1,7 +1,7 @@
 const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form__id-input");
 const logoutForm = document.querySelector(".logout-form");
-const greeting = document.querySelector('.logout-form__greeting');
+const greeting = document.querySelector('.greeting');
 
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
@@ -9,8 +9,6 @@ const USERNAME_KEY = "username"
 function onLoginSubmit(event) {
     event.preventDefault()
     const username = loginInput.value
-
-    console.log('asdf')
 
     if (!/^[A-Za-z가-힣0-9]{1,16}$/.test(username)) {
         alert("아이디는 완전한 한글, 영문, 숫자만 쓸 수 있으며 1자 이상에서 16자 이하이어야 합니다")
@@ -24,6 +22,7 @@ function onLoginSubmit(event) {
 
     localStorage.setItem(USERNAME_KEY, username)
 
+    logoutForm.classList.remove(HIDDEN_CLASSNAME)
     paintGreetings(username)
 }
 
@@ -31,6 +30,7 @@ function onLogoutSubmit(event) {
     event.preventDefault();
 
     logoutForm.classList.add(HIDDEN_CLASSNAME);
+    greeting.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginInput.value = '';
 
@@ -46,7 +46,7 @@ function onLogoutSubmit(event) {
 
 function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`
-    logoutForm.classList.remove(HIDDEN_CLASSNAME)
+    greeting.classList.remove(HIDDEN_CLASSNAME)
 }
 
 loginForm.addEventListener('submit', onLoginSubmit)

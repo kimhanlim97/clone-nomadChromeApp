@@ -1,3 +1,76 @@
+.page {
+    height: 100vh;
+    margin: 0;
+    background-image: url(/img/background-image.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+}
+
 .hidden {
     display: none;
 }
+
+.weather {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.clock {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin: 0;
+}
+
+.login-form {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logout-form {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    transform: translateX(-50%);
+}
+
+.greeting {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0px;
+}
+
+.todo-form {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.todo-list {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: auto;
+
+    width: 200px;
+    max-height: 200px;
+}
+
+.quote {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: fit-content;
+}
+
