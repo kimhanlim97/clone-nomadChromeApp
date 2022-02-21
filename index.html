@@ -10,16 +10,17 @@
 <body class="page">
     <h2 class="clock"></h2>
 
+    <div class="weather">
+        <span class="weather__city"></span>
+        <span class="weather__temp"></span>
+    </div>
+
+    <h1 class="greeting hidden"></h1>
+
     <form class="login-form hidden">
         <input class="input-text login-form__id-input" type="text" placeholder="What is your name?" maxlength="15" />
         <button class="btn login-form__login">Log In</button>
     </form>
-
-    <form class="logout-form hidden">
-        <button class="btn logout-form__logout">Log Out</button>
-    </form>
-
-    <h1 class="greeting hidden"></h1>
 
     <form class="todo-form hidden">
         <input class="input-text todo-form__todo-input" type="text" placeholder="Write a To Do and Press Enter" required>
@@ -28,11 +29,12 @@
     <ul class="todo-list"></ul>
 
     <p class="quote"></p>
+
+    <form class="logout-form hidden">
+        <button class="btn logout-form__logout">Log Out</button>
+    </form>
     
-    <div class="weather">
-        <span class="weather__city"></span>
-        <span class="weather__temp"></span>
-    </div>
+    
     <!-- <script src="js/background.js"></script> -->
     <script src="js/todo.js"></script>
     <script src="js/login.js"></script>
