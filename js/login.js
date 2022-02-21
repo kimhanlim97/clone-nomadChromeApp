@@ -49,7 +49,7 @@ function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME)
 }
 
-loginForm.addEventListener('submit', onLoginSubmit)
+loginForm.addEventListener('submit', onLoginSubmit);
 logoutForm.addEventListener('submit', onLogoutSubmit);
 
 // Local Storage에 저장된 username을 변수에 할당(만약 존재하지 않을 경우 null값이 할당됨)
@@ -62,7 +62,10 @@ if (savedUsername === null) {
 
 } else {
 
+    toDoForm.classList.remove(HIDDEN_CLASSNAME)
+    logoutForm.classList.remove(HIDDEN_CLASSNAME);
     // Local Storage에 저장된 username이 있을 경우 환영 인사를 활성화함
     paintGreetings(savedUsername)
+    console.log('HI')
 
 }
