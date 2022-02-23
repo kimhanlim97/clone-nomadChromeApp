@@ -1,0 +1,49 @@
+.page {
+    height: 100vh;
+}
+
+.weather {
+    @include position(absolute, 23px, 30px, null, null);
+}
+
+.clock {
+    @include position(absolute, 23px, null, null, 30px);
+}
+
+.login-form {
+    @include position(absolute, 35%, null, null, 50%);
+    transform: translateX(-50%);
+}
+
+.logout-form {
+    @include position(relative, 55%, null, null, 83%);
+    width: fit-content;
+}
+
+.greeting {
+    @include position(relative, 16%, null, null, 50%);
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.todo-form {
+    @include position(absolute, 35%, null, null, 50%);
+    transform: translateX(-50%);
+}
+
+.todo-list {
+    @include position(relative, 40%, null, null, 50%);
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 400px;
+    max-height: 200px;
+    overflow: auto;
+    
+}
+
+.quote {
+    @include position(relative, 65%, null, null, 50%);
+    transform: translateX(-50%);
+    width: fit-content;
+}
+

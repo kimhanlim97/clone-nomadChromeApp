@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+  padding: 0;
+}
+
+.page {
+  background-color: #001338;
+  background-image: url(/img/background-image.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.todo-form__todo-input {
+  width: 250px;
+}
+
+.todo-list:-webkit-scrollbar {
+  width: 10px;
+}
+.todo-list:-webkit-scrollbar-thumb {
+  background-color: black;
+}
+.todo-list__list {
+  position: relative;
+  margin: 10px;
+  padding: 10px;
+  width: 350px;
+  border: 3px solid white;
+}
+.todo-list__list__text {
+  display: inline-block;
+  width: 295px;
+  line-height: 24px;
+  word-break: break-all;
+}
+.todo-list__list__delete {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-15px);
+  padding-top: 3.3px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 100%;
+  font-size: 16px;
+  background-color: transparent;
+}
+.todo-list__list__delete:hover {
+  cursor: pointer;
+}
+
+.input-text {
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid white;
+  border-radius: 3px;
+  color: white;
+  background-color: transparent;
+}
+.input-text::placeholder {
+  color: white;
+  font-size: 15px;
+  text-align: center;
+}
+.input-text:focus {
+  outline: none;
+}
+.input-text:focus::placeholder {
+  color: transparent;
+}
+
+.btn {
+  height: 33px;
+  border: 3px solid white;
+  border-radius: 3px;
+  background-color: transparent;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.page {
+  height: 100vh;
+}
+
+.weather {
+  position: absolute;
+  top: 23px;
+  right: 30px;
+}
+
+.clock {
+  position: absolute;
+  top: 23px;
+  left: 30px;
+}
+
+.login-form {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logout-form {
+  position: relative;
+  top: 55%;
+  left: 83%;
+  width: fit-content;
+}
+
+.greeting {
+  position: relative;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+.todo-form {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.todo-list {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 400px;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.quote {
+  position: relative;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+/*# sourceMappingURL=main.css.map */
