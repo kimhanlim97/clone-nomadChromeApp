@@ -1,0 +1,25 @@
+{
+  "name": "clone-nomadchromeapp",
+  "version": "1.0.0",
+  "description": "Clone coding practice to become familiar with HTML, CSS, and JavaScript",
+  "main": "index.js",
+  "devDependencies": {
+    "sass": "^1.49.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass sass/main.scss:css/main.css",
+    "watch:sass": "sass --watch sass/main.scss:css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimhanlim97/clone-nomadChromeApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimhanlim97/clone-nomadChromeApp/issues"
+  },
+  "homepage": "https://github.com/kimhanlim97/clone-nomadChromeApp#readme"
+}
