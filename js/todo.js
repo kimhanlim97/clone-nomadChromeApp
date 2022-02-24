@@ -1,6 +1,7 @@
 const toDoForm = document.querySelector('.todo-form');
-const toDoInput = document.querySelector(".todo-form .todo-form__todo-input");
-const toDoList = document.querySelector('.todo-list');
+const toDoInput = document.querySelector(".todo-form__input");
+const toDoList = document.querySelector(".todo-list")
+const toDoListContentWrapper = document.querySelector('.todo-list__content-wrapper');
 
 const TODOS_KEY = "todos"
 
@@ -32,7 +33,7 @@ function paintToDo(newToDoObj) {
     li.appendChild(span);
     li.appendChild(button);
     
-    toDoList.appendChild(li);
+    toDoListContentWrapper.appendChild(li);
 }
 
 function handleToDoSubmit(event) {

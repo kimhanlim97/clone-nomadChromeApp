@@ -8,30 +8,57 @@
     <title>clone-nomadChromeApp</title>
 </head>
 <body class="page">
-    <h2 class="clock"></h2>
 
-    <div class="weather">
-        <span class="weather__city"></span>
-        <span class="weather__temp"></span>
+    <div class="clock">
+        <div class="clock__content-wrapper">
+            <h2 class="clock__text"></h2>
+        </div>
     </div>
 
-    <h1 class="greeting hidden"></h1>
+    <div class="title">
+        <div class="title__content-wrapper">
+            <h1 class="title__text">ToDo List</h1>
+        </div>
+    </div>
+
+    <div class="weather">
+        <div class="weather__content-wrapper">
+            <p class="weather__text">
+                <span class="weather__text__city"></span>
+                <span class="weather__text__temp"></span>
+            </p>
+        </div>
+    </div>
 
     <form class="login-form hidden">
-        <input class="input-text login-form__id-input" type="text" placeholder="What is your name?" maxlength="15" />
-        <button class="btn login-form__login">Log In</button>
+        <div class="login-form__content-wrapper">
+            <input class="input-text login-form__input" type="text" placeholder="What is your name?" maxlength="15" />
+            <button class="btn login-form__btn">Log In</button>
+        </div>
     </form>
 
     <form class="todo-form hidden">
-        <input class="input-text todo-form__todo-input" type="text" placeholder="Write a To Do and Press Enter" required>
+        <div class="todo-form__content-wrapper">
+            <input class="input-text todo-form__input" type="text" placeholder="Write a To Do and Press Enter" required>
+        </div>
     </form>
 
-    <ul class="todo-list"></ul>
+    <div class="todo-list hidden">
+        <ul class="todo-list__content-wrapper">
 
-    <p class="quote"></p>
+        </ul>
+    </div>
+
+    <div class="quote">
+        <div class="quote__content-wrapper">
+            <p class="quote__text"></p>
+        </div>
+    </div>
 
     <form class="logout-form hidden">
-        <button class="btn logout-form__logout">Log Out</button>
+        <div class="logout-form__content-wrapper">
+            <button class="btn logout-form__btn">Log Out</button>
+        </div>
     </form>
     
     <script src="js/todo.js"></script>

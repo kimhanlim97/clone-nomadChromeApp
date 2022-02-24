@@ -1,7 +1,7 @@
 const loginForm = document.querySelector(".login-form");
-const loginInput = document.querySelector(".login-form__id-input");
+const loginInput = document.querySelector(".login-form__input");
 const logoutForm = document.querySelector(".logout-form");
-const greeting = document.querySelector('.greeting');
+const greeting = document.querySelector('.title__text');
 
 const HIDDEN_CLASSNAME = "hidden"
 const USERNAME_KEY = "username"
@@ -17,8 +17,9 @@ function onLoginSubmit(event) {
 
     loginForm.classList.add(HIDDEN_CLASSNAME)
 
-    // todo.js의 ToDoForm DOM 객체의 hidden 클래스를 제거함
+    // todo.js의 ToDoForm, ToDoList DOM 객체의 hidden 클래스를 제거함
     toDoForm.classList.remove(HIDDEN_CLASSNAME)
+    toDoList.classList.remove(HIDDEN_CLASSNAME)
 
     localStorage.setItem(USERNAME_KEY, username)
 
@@ -30,23 +31,23 @@ function onLogoutSubmit(event) {
     event.preventDefault();
 
     logoutForm.classList.add(HIDDEN_CLASSNAME);
-    greeting.classList.add(HIDDEN_CLASSNAME);
+    greeting.innerText = 'ToDo List';
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginInput.value = '';
 
-    // todo.js의 ToDoForm DOM 객체의 hidden 클래스를 추가함
+    // todo.js의 ToDoForm, ToDoList DOM 객체의 hidden 클래스를 추가함
     toDoForm.classList.add(HIDDEN_CLASSNAME);
+    toDoList.classList.add(HIDDEN_CLASSNAME);
 
     localStorage.clear();
 
     // todo.js의 todos 변수를 초기화하고 toDoList 변수의 자식 엘리먼트들을 모두 삭제함
     todos = [];
-    [...toDoList.childNodes].forEach(li => li.remove())
+    [...toDoListContentWrapper.childNodes].forEach(li => li.remove())
 }
 
 function paintGreetings(username) {
     greeting.innerText = `Hello ${username}`
-    greeting.classList.remove(HIDDEN_CLASSNAME)
 }
 
 loginForm.addEventListener('submit', onLoginSubmit);
@@ -63,6 +64,7 @@ if (savedUsername === null) {
 } else {
 
     toDoForm.classList.remove(HIDDEN_CLASSNAME)
+    toDoList.classList.remove(HIDDEN_CLASSNAME)
     logoutForm.classList.remove(HIDDEN_CLASSNAME);
     // Local Storage에 저장된 username이 있을 경우 환영 인사를 활성화함
     paintGreetings(savedUsername)

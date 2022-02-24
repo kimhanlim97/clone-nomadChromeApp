@@ -1,4 +1,4 @@
-const quote = document.querySelector('.quote')
+const quote = document.querySelector('.quote__text')
 
 fetch('https://api.adviceslip.com/advice')
     .then(res => res.json())

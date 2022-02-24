@@ -7,8 +7,8 @@ function onGeoOk(position) {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            const city = document.querySelector('.weather .weather__city');
-            const weather = document.querySelector('.weather .weather__temp');
+            const city = document.querySelector('.weather__text__city');
+            const weather = document.querySelector('.weather__text__temp');
             
             city.innerText = data.name;
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`

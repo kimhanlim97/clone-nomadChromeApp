@@ -23,19 +23,32 @@ li {
   display: none;
 }
 
-.todo-form__todo-input {
+.clock__text {
+  text-align: center;
+}
+
+.title__text {
+  text-align: center;
+}
+
+.weather__text {
+  text-align: center;
+}
+
+.todo-form__input {
   width: 250px;
 }
 
-.todo-list:-webkit-scrollbar {
-  width: 10px;
+.quote__text {
+  text-align: center;
 }
-.todo-list:-webkit-scrollbar-thumb {
-  background-color: black;
+
+.todo-list::-webkit-scrollbar {
+  display: none;
 }
 .todo-list__list {
   position: relative;
-  margin: 10px;
+  margin-top: 10px;
   padding: 10px;
   width: 350px;
   border: 3px solid white;
@@ -95,66 +108,112 @@ li {
 }
 
 .page {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: space-between;
+  align-content: space-between;
   height: 100vh;
 }
 
-.weather {
-  position: absolute;
-  top: 23px;
-  right: 30px;
+.clock {
+  width: 20%;
+  height: 20%;
+}
+.clock__content-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.clock {
-  position: absolute;
-  top: 23px;
-  left: 30px;
+.title {
+  width: 60%;
+  height: 20%;
+}
+.title__content-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.weather {
+  width: 20%;
+  height: 20%;
+}
+.weather__content-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-form {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  height: 60%;
 }
-
-.logout-form {
+.login-form__content-wrapper {
   position: relative;
-  top: 55%;
-  left: 83%;
-  width: fit-content;
-}
-
-.greeting {
-  position: relative;
-  top: 16%;
+  top: 7%;
   left: 50%;
   transform: translateX(-50%);
   width: fit-content;
 }
 
 .todo-form {
-  position: absolute;
-  top: 35%;
+  width: 100%;
+  height: 20%;
+}
+.todo-form__content-wrapper {
+  position: relative;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+  width: fit-content;
 }
 
 .todo-list {
-  position: relative;
-  top: 40%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px;
-  width: 400px;
-  max-height: 200px;
+  width: 100%;
+  height: 50%;
   overflow: auto;
+}
+.todo-list__content-wrapper {
+  margin: auto;
+  width: fit-content;
 }
 
 .quote {
+  width: 80%;
+  height: 10%;
+}
+.quote__content-wrapper {
   position: relative;
-  top: 65%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+}
+
+.logout-form {
+  width: 20%;
+  height: 10%;
+}
+.logout-form__content-wrapper {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: fit-content;
 }
 
